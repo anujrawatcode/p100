@@ -2,16 +2,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int fact(int n)
+int fib(int n)
 {
     // base condition
+    if (n < 0)
+        return -1;
     if (n == 0)
+        return 0;
+    if (n == 1)
         return 1;
-    // logic
-    return n * fact(n - 1);
+    return fib(n - 1) + fib(n - 2);
 }
 int main()
 {
     int n = 5;
-    cout << fact(n);
+    cout << fib(n);
 }
