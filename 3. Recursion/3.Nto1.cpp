@@ -6,12 +6,21 @@ void print(int n)
     if (n < 1)
         return;
     cout << n;
-    return print(n - 1);
+    print(n - 1);
 }
+
+void print(int n)
+{
+    if (n < 1)
+        return;
+    print(n - 1);
+    cout << n;
+}
+
+
 int main()
 {
     int n = 5;
-
     print(n);
     return 0;
 }
